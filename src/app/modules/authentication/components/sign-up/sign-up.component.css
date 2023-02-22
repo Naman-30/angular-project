@@ -1,0 +1,22 @@
+.mat-form-field{
+    width:100%;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-fluid{
+    background: #f1f1f1;
+}
+
+.cardEdit.INVALID{
+    border: 1px solid red;
+    box-shadow: 0 0 50px rgb(255, 0, 0) !important;
+}
+.cardEdit.VALID{
+    border: 1px solid GREEN;
+    box-shadow: 0 0 50px rgb(0, 255, 13) !important;
+}

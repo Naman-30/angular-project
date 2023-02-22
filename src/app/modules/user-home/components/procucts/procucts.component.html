@@ -1,0 +1,44 @@
+<div class="page-area">
+    <div class="text-center">
+        <h2>Products</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <hr class="mb-3">
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" appMouseOver *ngFor="let items of productsData">
+                <img class="card-img-top" src="{{items.imgUrl}}" alt="product {{items.id}}">
+                <div class="card-body">
+                  <h3 class="card-title">{{items.title}}</h3>
+                  <p class="card-text">Some quick example text to build on the card.</p>
+                  <a routerLink="{{items.id}}" class="btn btn-success">Know More</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="goBack">
+  <button routerLink="/userHome">go to home</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

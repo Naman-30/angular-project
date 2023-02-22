@@ -1,0 +1,38 @@
+.toolbar{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  }
+
+  nav{
+    background-color: rgb(179, 234, 236);
+  }
+
+  .small{
+    font-size: smaller;
+    line-height: 0;
+  }
+
+  .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .mar{
+    margin-bottom: 15px;
+  }
+
+  li{
+    list-style: none;
+    margin-left: 10px;
+  }
+
+  ul{
+    display: flex;
+  }

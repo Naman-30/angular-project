@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row m-5">
+        <div class="col-md-3 text-left items-details">
+            <h2>Gallery Item: <strong>{{selectedItem.id}}</strong></h2>
+           <h2> Title: <strong>{{selectedItem.title}}</strong></h2>
+        </div>
+        <div class="col-md-9">
+            <div class="card" style="width: 100%;">
+                <!-- <img class="card-img" src="{{selectedItem.imgUrl}}" alt="{{selectedItem.Title}}"> -->
+                <div class="card-img">
+                  <lib-ngx-image-zoom
+      [thumbImage]=selectedItem.imgUrl
+      [fullImage]=selectedItem.ingUrl
+      [magnification]="2"
+      [zoomMode]="'hover-freeze'"
+      [enableLens]="true"
+      [lensWidth]="300"
+      [lensHeight]="300"
+  ></lib-ngx-image-zoom>
+                </div>
+        </div>
+    </div>
+</div>

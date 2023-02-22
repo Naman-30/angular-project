@@ -1,0 +1,17 @@
+<div class="row text-left">
+  <div class="cal-md-12 px-5 py-5">
+    <h1 class="">Our Gallery</h1>
+  </div>
+</div>
+<div class="card row imageGallery px-5 m-5 p-3" >
+  <div class="card cal-md-3 m-3 shadow p-3 mb-5 bg-white rounded" style="width: 28%" *ngFor="let item of galleryData">
+    <a appMouseOver routerLink="{{item.id}}">
+        <img src="{{item.imgUrl}}" style="width: 100%" alt="img1" />
+
+    <div class="card-body">
+      <h3>{{item.title}}</h3>
+    </div>
+    </a>
+  </div>
+</div>
+

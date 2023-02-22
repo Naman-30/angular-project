@@ -1,0 +1,13 @@
+.spinner{
+    margin: 140px;
+}
+
+.inner{
+    width: 100px;
+    height: 100px;
+}
+
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 22px #ff0000 inset;
+}

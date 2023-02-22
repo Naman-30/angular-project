@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.box{
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    width: 300px;
+    margin: 20px;
+}
+
+input{
+    background: #fff;
+    border-radius: 1px solid #f8f8f8;
+    font-size: 18px;
+    display: block;
+    width: 80%;
+    padding: 10px 12px;
+}
+
+button{
+    background: #28a745;
+    font-size: 20px;
+    color: #fff;
+    padding: 6px 15px;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px auto;
+    display: inline-block;
+    width: auto;
+}
+
+.data{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+

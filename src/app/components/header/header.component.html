@@ -1,0 +1,167 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse toolbar" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Our - Kart</a>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+    <a routerLink="userHome/products" class="black" *ngIf="goBackLink">
+      <mat-icon>arrow_back_ios</mat-icon>
+      <span class="mar">Back to Products</span>
+    </a>
+    <a routerLink="userHome/gallery" class="black" *ngIf="goBackLink2">
+      <mat-icon>arrow_back_ios</mat-icon>
+      <span class="mar">Back to Gallery</span>
+    </a>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+    <ul *ngIf="headerNav" class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" active routerLink="/userHome">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="userHome/aboutUs">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="userHome/gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="userHome/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="userHome/contactUs">Contact Us</a>
+      </li>
+    </ul>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+    <div class="div-inline my-2 my-lg-0 logSignIn" *ngIf="welcomeLogOut">
+      <span [style.fontWeight]="'900'"
+        >Welcome <span [style.color]="'gray'">{{userName}}</span></span
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-button (click)="logout()">Logout</button>
+    </div>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+<div class="div-inline my-2 my-lg-0 logSignIn" *ngIf="logSignUser">
+  <button mat-raised-button color="primary" routerLink="/signUp">
+    signUp
+  </button>
+  <span class="signUpClass">&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+  <button mat-raised-button routerLink="/login">login</button>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+<div class="div-inline my-2 my-lg-0 contact" *ngIf="contactDetail">
+  <a href="mailto:naman@test.com" class="small">
+    <mat-icon class="small mt-3">mail</mat-icon>naman@test.com
+  </a>
+  <a href="mailto:naman@test.com" class="small">
+    <mat-icon class="small mb-0">phone</mat-icon>9087652143
+  </a>
+</div>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>
+    <mat-toolbar class="toolbar" color="primary">
+        <div class="nameLogo">
+            <button mat-icon-button>
+                <mat-icon>menu</mat-icon>
+              </button>
+              <span>My Application</span>
+        </div>
+      <div class="buttons">
+        <button mat-raised-button color="primary" routerLink="/signUp">signUp</button>
+
+        &nbsp;&nbsp; | &nbsp;&nbsp;
+        <button mat-raised-button routerLink="/login">login</button>
+      </div>
+
+    </mat-toolbar>
+  </p> -->
+<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button">signUp</button> -->
+
+<!-- <ul>
+  <li>Welcome <strong class="text-primary"> Naman</strong></li>
+  <li>
+    <a href=""><i class="fas fa-unlock"></i>Logout</a>
+  </li>
+</ul> -->

@@ -1,0 +1,24 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">
+            <input type="text" class="form-control" [(ngModel)]="searchInput" placeholder="Search">
+        </th>
+      </tr> 
+      <tr>
+        <th scope="col">S No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of products | filter: searchInput">
+        <th scope="row">{{data.Id}}</th>
+        <td>{{data.Name}}</td>
+        <td>{{data.Price}}</td>
+        <td>{{data.availability}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

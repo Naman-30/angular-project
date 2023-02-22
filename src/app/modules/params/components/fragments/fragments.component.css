@@ -1,0 +1,21 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+ul li{
+  text-decoration: none;
+  list-style: none;
+  color: rgb(118, 70, 21);
+}
+
+ul li:hover{
+  color:rgb(223, 96, 140);
+}
+
+mat-toolbar{
+  background-color: rgb(126, 226, 212);
+  position:sticky;
+  position: fixed;
+  top: 0;
+  margin-bottom: 60px;
+}

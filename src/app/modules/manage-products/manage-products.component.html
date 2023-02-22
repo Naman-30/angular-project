@@ -1,0 +1,116 @@
+<div class="container-fluid">
+  <h1 [style.textAlign]="'center'" class="m-3">Manage Products</h1>
+
+  <div class="container d-flex justify-content-around">
+    <div class="col-md-6 m-3">
+      <div class="form">
+        <form>
+          <div>
+            <h1>Add Products</h1>
+          </div>
+          <div class="form-group m-3">
+            <label for="id">Product Id</label>
+            <input
+              #id
+              type="text"
+              class="form-control"
+              id="id"
+              placeholder="Enter text"
+            />
+          </div>
+          <div class="form-group m-3">
+            <label for="exampleInputtext1">Product Name</label>
+            <input
+              #name
+              type="text"
+              class="form-control"
+              id="exampleInputtext1"
+              placeholder="Enter text"
+            />
+          </div>
+          <div class="form-group m-3">
+            <label for="exampleInputtext1">Product Price</label>
+            <input
+              #price
+              type="text"
+              class="form-control"
+              id="exampleInputtext1"
+              placeholder="Enter text"
+            />
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary m-2"
+            (click)="addProducts(id, name, price)"
+          >
+            {{updateMode ? 'Update Product' : 'Add Product' }}
+          </button>
+          <button
+            type="button"
+            class="btn btn-success m-2"
+            (click)="saveData()"
+          >
+            save data
+          </button>
+          <button
+            type="button"
+            class="btn btn-warning m-2"
+            (click)="fetchProducts()"
+          >
+            fetch data
+          </button>
+          <!-- <button type="submit" class="btn btn-danger m-2" (click)="fetchProducts()">don't touch it</button> -->
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6 m-3">
+      <div>
+        <h1>Products</h1>
+      </div>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="!fetching">
+          <tr *ngFor="let data of arrayOfData; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ data.id }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.price }}</td>
+            <td>
+              <button
+                mat-mini-fab
+                (click)="editData(i)"
+                style="color: #4caf50; background-color: #ebebeb"
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+            <td>
+              <button
+                mat-mini-fab
+                (click)="removeData(i)"
+                style="color: #d32f2f; background-color: #ebebeb"
+              >
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <div *ngIf="fetching" class="spinner">
+          <div class="spinner-border text-secondary inner" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </table>
+    </div>
+  </div>
+</div>

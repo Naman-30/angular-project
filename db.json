@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "username": "NamanPatel",
+      "email": "naman@test.com",
+      "password": "qwerty123",
+      "confirmPassword": "qwerty123",
+      "id": 1
+    },
+    {
+      "username": "NamanPat",
+      "email": "naman@test.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 2
+    },
+    {
+      "username": "Naman",
+      "email": "naman@gamil.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 3
+    },
+    {
+      "username": "naman",
+      "email": "naman@admin.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 4
+    },
+    {
+      "username": "naman_01",
+      "email": "naman.01@test.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 5
+    },
+    {
+      "username": "naman_02",
+      "email": "naman.02@test.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 6
+    },
+    {
+      "username": "ravi@123",
+      "email": "ravi@gmial.com",
+      "password": "Ravi@123",
+      "confirmPassword": "Ravi@123",
+      "id": 7
+    },
+    {
+      "username": "naman07",
+      "email": "test@gmail.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 8
+    },
+    {
+      "username": "naman_07",
+      "email": "naman07@test.com",
+      "password": "Naman@123",
+      "confirmPassword": "Naman@123",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

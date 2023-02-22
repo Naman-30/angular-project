@@ -1,0 +1,42 @@
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+button:disabled {
+  background-color: 	#198754
+}
+
+.imgcontainer {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 2px auto;
+}
+
+img.avatar {
+  border-radius: 50%;
+}
+
+.container {
+  padding: 36px;
+}
+
+.form-text{
+  color: tomato;
+}
+
+.material-icons{
+  position: relative;
+  bottom: 53px;
+  left: 96%;
+  cursor: pointer;
+}
+

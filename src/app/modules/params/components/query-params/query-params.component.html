@@ -1,0 +1,17 @@
+<p>query-params works!</p>
+<button routerLink="../" class="btn btn-success m-5">
+  Go Back
+</button>
+
+<button class="btn btn-success m-3" routerLink="/userHome/params/query-params" [queryParams]="{editMode: true}">sendQueryParam</button>
+<button class="btn btn-success m-3" routerLink="/userHome/params/query-params">removeQueryParam</button>
+
+<mat-card class="example-car m-5">
+  <mat-card-content>
+    query params data:{{data | json}}
+
+    <br>
+    condition: {{condition}}
+  </mat-card-content>
+
+</mat-card>

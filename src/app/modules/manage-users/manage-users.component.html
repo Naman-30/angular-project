@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <h1 [style.textAlign]="'center'"class="m-3">Manage Users</h1>
+
+<div class="container d-flex justify-content-around">
+    <div class="col-md-6 m-3">
+        <div class="form">
+            <form #userForm="ngForm" (ngSubmit)="addUser(userForm.valid && userForm.value)">
+                <div>
+                    <h1>Add Users</h1>
+                </div>
+                <div class="form-group m-3">
+                  <label for="id">User name</label>
+                  <input name="name" ngModel type="text" class="form-control" id="id" placeholder="Enter name" required>
+                </div>
+                <div class="form-group m-3">
+                  <label for="usersTechnology">Technology</label>
+                  <input name="technology" ngModel type="text" class="form-control" id="usersTechnology" placeholder="Enter technology" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary m-2">{{editMode? 'Update user' : 'Add Users'}}</button>
+
+                <button type="button" class="btn btn-warning m-2" (click)="fetchUsers()">fetch data</button>
+
+              </form>
+        </div>
+    </div>
+    <div class="col-md-6 m-3">
+        <div>
+            <h1>Users Data</h1>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Technology</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="!fetching">
+              <tr *ngFor="let data of arrayOfData;index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{data.name}}</td>
+                <td>{{data.technology}}</td>
+                <td><button mat-mini-fab (click)="editUser(data.userId, i)" style="color:#4CAF50" color="green"><mat-icon>edit</mat-icon></button></td>
+                <td><button mat-mini-fab (click)="deleteUser(data.userId)" style="color:#D32F2F" color="red"><mat-icon>delete</mat-icon></button></td>
+              </tr>
+            </tbody>
+            <div  *ngIf="fetching" class="spinner">
+              <div class="spinner-border text-secondary inner" role="status">
+                <span class="visually-hidden">Loading...</span> 
+              </div> 
+            </div>
+          </table>
+    </div>
+</div>
+</div>
+
